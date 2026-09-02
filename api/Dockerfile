@@ -14,4 +14,4 @@ COPY . .
 EXPOSE 5000
 
 # run the node process within container
-CMD ["node", "app.js"]
+CMD ["npm", "run", "dev"]
