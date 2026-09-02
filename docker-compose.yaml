@@ -1,0 +1,9 @@
+services:
+  api:
+    build: ./api
+    container_name: api_c # c for container
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./api:/app # source code on the host -> /app in the container
+      - /app/node_modules
