@@ -7,3 +7,13 @@ services:
     volumes:
       - ./api:/app # source code on the host -> /app in the container
       - /app/node_modules
+  client:
+    build: ./client
+    container_name: client_c
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    stdin_open: true
+    tty: true
